@@ -23,7 +23,9 @@ on:
         description: 'Slack user'
         required: true
         type: string
-
+permissions:
+  contents: write      # リポジトリの内容を変更する権限
+  pull-requests: write # PRを作成する権限（必要に応じて）
 jobs:
   generate-project:
     runs-on: ubuntu-latest
